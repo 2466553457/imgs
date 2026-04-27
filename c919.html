@@ -1,0 +1,2227 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>***-+*-+*？-*+*</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Microsoft YaHei", sans-serif;
+      }
+
+      body {
+        background-color: #f5f7fa;
+        padding: 30px 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #222;
+        font-size: 26px;
+      }
+
+      .subtitle {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .search-box {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 16px;
+        border: 2px solid #0066cc;
+        border-radius: 8px;
+        outline: none;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0, 102, 204, 0.1);
+      }
+
+      .search-box:focus {
+        border-color: #004d99;
+        box-shadow: 0 2px 15px rgba(0, 102, 204, 0.2);
+      }
+
+      /* 分类标题样式 */
+      .category-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #cc0000;
+        margin: 20px 0 10px;
+        padding-left: 5px;
+        border-left: 4px solid #cc0000;
+      }
+
+      .abbr-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 12px;
+        margin-bottom: 15px;
+      }
+
+      .abbr-item {
+        background: white;
+        padding: 14px 16px;
+        border-radius: 6px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+        font-size: 15px;
+        line-height: 1.5;
+        transition: all 0.2s;
+      }
+
+      .abbr-item.hidden,
+      .category-title.hidden {
+        display: none;
+      }
+
+      .abbr-code {
+        font-weight: bold;
+        color: #0066cc;
+        margin-right: 8px;
+      }
+
+      .highlight {
+        background-color: #fff3cd;
+        color: #d48806;
+        padding: 1px 3px;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">C919 航空缩写查询工具</h1>
+    <p class="subtitle">
+      按A-Z首字母分类，输入字母/中文搜索，不匹配内容自动隐藏
+    </p>
+
+    <input
+      type="text"
+      class="search-box"
+      id="searchInput"
+      placeholder="输入英文缩写或中文释义搜索... 例如 APU、发动机、导航"
+    />
+
+    <!-- A 开头 -->
+    <h2 class="category-title">A 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">3G</span> 3rd Generation
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">A/THR</span> Autothrust
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AAC</span> Airline Administrative Communications
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ABCU</span> Alternate Brake Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ABCV</span> Alternate Brake Control Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ABV</span> Auto Bleed Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AC</span> Advisory Circular
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AC</span> Alternating Current
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AC 1 ER</span> AC One-phase Essential Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACARS</span> Aircraft Communications Addressing
+        and Reporting System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACAS</span> Airborne Collision Avoidance System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACE</span> Actuator Control Electronics
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACES</span> Automatic Checkout and Evaluation
+        System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACMF</span> Aircraft Condition Monitoring
+        Function
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACMS</span> Aircraft Condition Monitoring System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACMS</span> Attendant Control and Management
+        Subsystem
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACP</span> Audio Control Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACPS</span> Avionics Core Process System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACR</span> Aircraft Configuration Reporting
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACRS</span> Aircraft Configuration Reporting
+        System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACS</span> Air Conditioning System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACS</span> ARINC 664 Cabinet Switch
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACTR</span> AC Tie Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ACU</span> Audio Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADA</span> Air Data Application
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADB</span> Actuator Data Bus
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADC</span> Air Data Computer
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADF</span> Automatic Direction Finder
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADHC</span> Air Data Heater Controller
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADM</span> Air Data Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADN</span> Aircraft Data Network
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADN</span> Avionics Data Network
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADPCT</span> ASG Differential Protection Current
+        Transformer
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADS</span> Air Data System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADS</span> Automatic Dependent Surveillance
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADS-B</span> Automatic Dependent
+        Surveillance-Broadcast
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ADS-C</span> Automatic Dependent
+        Surveillance-Contract
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AES</span> Alternate Extension Switch
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AF ELT</span> Automatic Fixed Emergency Locator
+        Transmitter
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AFCS</span> Automatic Flight Control System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AFDX</span> Avionics Full Duplex Switched
+        Ethernet
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AFN</span> ATS Facilities Notification
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AFT FAFR</span> Aft Enhanced Aircraft Flight
+        Recorder
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AFTBFAN</span> Afterward Blowing Fan
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AFTBFLTR</span> Afterward Blowing Filter
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AFTEFAN</span> Afterward Extraction Fan
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AGC</span> Auxiliary Generator Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AGL</span> Above Ground Level
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AGS</span> ARINC661 Graphic Server
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AGS</span> Avionics Graphics Server
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AHMS</span> Aircraft Health Management System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AHMU</span> Aircraft Health Management Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AJP</span> Audio Jack Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AM</span> Amplitude Modulation
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AME</span> Amplitude Modulation Equivalent
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AMIF</span> ACARS Maintenance Interface Function
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AM-MSK</span> Amplitude-Minimum Shift Keying
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AMP</span> Area Microphone/Preamplifier
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AMP</span> Audio Miscellaneous Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AMS</span> Air Management System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ANP</span> Actual Navigation Performance
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AOA</span> ACARS Over AVLC
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AOA</span> Angle Of Attack
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AOC</span> Aeronautical Operational Control
+      </div>
+      <div class="abbr-item"><span class="abbr-code">AP</span> Autopilot</div>
+      <div class="abbr-item">
+        <span class="abbr-code">APM</span> Aircraft Personality Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">APS</span> Altitude Pressure Switch
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">APS</span> Auxiliary Power System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">APU</span> Auxiliary Power Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ARINC</span> Aeronautical Radio Incorporated
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ARS</span> ARINC 664 Remote Switch
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ASD</span> ASM Status Display
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ASG</span> APU Starter Generator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ASGS</span> APU Starter Generator System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ASIM</span> Avionics Security Interface Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ASM</span> Air Separation Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ASM</span> Airport Surface Map
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ASMS</span> Airport Surface Map System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ASP</span> Attendant Switch Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ASP</span> Autothrottle Speed Protection
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AT</span> Autothrottle
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ATC</span> Air Traffic Control
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ATD</span> Access Time Delay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ATIS</span> Automatic Terminal Information
+        Service
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ATM</span> Air Traffic Management
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ATN</span> Aeronautical Telecommunication
+        Network
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ATS</span> Air Traffic Service
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ATS</span> Air Turbine Starter
+      </div>
+      <div class="abbr-item"><span class="abbr-code">AUX</span> Auxiliary</div>
+      <div class="abbr-item">
+        <span class="abbr-code">AVLC</span> Aviation VHF Link Control
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AVV</span> Avionics Ventilation Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AWCA</span> Airport Wireless Communication
+        Antenna
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">AWCU</span> Airport Wireless Communication Unit
+      </div>
+    </div>
+
+    <!-- B 开头 -->
+    <h2 class="category-title">B 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">BAI</span> Barometric Altitude Indicator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BAS</span> Bleed Air System
+      </div>
+      <div class="abbr-item"><span class="abbr-code">BATT</span> Battery</div>
+      <div class="abbr-item">
+        <span class="abbr-code">BATT CHG</span> Battery charger
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BBPEV</span> Baggage Bay Pressure Equalization
+        Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BBSOV</span> Baggage Bay Shut Off Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BC</span> Broadband Controller
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BCKV</span> Bulkhead Check Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BCMS</span> Brake Control and Monitoring System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BCMU</span> Brake Control and Monitoring Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BCS</span> Brake Control System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BCV</span> Brake Control Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BIFI</span> Bifurcation
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BIT</span> Built-In Test
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BITE</span> Built-In Test Equipment
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BMPS</span> Bleed Monitoring Pressure Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BPCU</span> Bus Power Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BPS</span> Bleed Pressure Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BTC</span> Bus Tie Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BTCM</span> Brake Temperature Compensation
+        Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BTS</span> Base Transceiver Station
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">BTS</span> Bleed Temperature Sensor
+      </div>
+    </div>
+
+    <!-- C 开头 -->
+    <h2 class="category-title">C 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item"><span class="abbr-code">CAB</span> Cabin</div>
+      <div class="abbr-item">
+        <span class="abbr-code">CAC</span> Cabin Camera
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CAN</span> Common Area Network
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CAN</span> Controller Area Network
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CAPHM</span> COMAC prognostic and Health
+        Management System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CAS</span> Calibrated Air Speed
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CAS</span> Crew Alerting System
+      </div>
+      <div class="abbr-item"><span class="abbr-code">CAT</span> Category</div>
+      <div class="abbr-item">
+        <span class="abbr-code">CB</span> Circuit Breaker
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CBC</span> Circuit Breaker Indication and
+        Control
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CBIT</span> Continuous Built-In Test
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CBS LRM</span> Circuit Breaker Status Line
+        Replaceable Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CBV</span> Cross Bleed Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CCD</span> Cursor Control Device
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CCM</span> Core Calculation Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CCS</span> Cabin Communication System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CCS</span> Cabin Core System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CDA</span> Cockpit Display Application
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CDAS</span> Cargo Door Actuation System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CDC</span> Cockpit Door Camera
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CDS</span> Central Display System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CDSS</span> Cockpit Door Surveillance System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CED</span> Cooling Effect Detector
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CFRP</span> Carbon Fiber Reinforced Plastic
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CGC</span> Cargo Camera
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CIU</span> Cabin Interface Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CM</span> Central Maintenance
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CM</span> Context Management
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CMF</span> Central Maintenance Function
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CMF</span> Communication Management Function
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CMFA</span> Condition Monitoring Function
+        Application
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CMIS</span> Cabin Management Interface Subsystem
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CMS</span> Cabin Management System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CMS</span> Central Maintenance System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CMS</span> Communication Management System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CMT</span> Cabin Management Terminal
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CMU</span> Communication Management Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CNS</span> Communication, Navigation,
+        Surveillance
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CODEC</span> Coder/Decoder
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">COMM</span> Communication
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CPA</span> Control Panel Assembly
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CPDLC</span> Controller-Pilot Data Link
+        Communication
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CPIHR</span> Cold Path Inlet Header
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CPL</span> Continuous Parameter Log
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CPPT</span> Cockpit Printer
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CPR</span> Core Processing Resources
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CRS</span> Corrosion Resistant Steel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CSA</span> Control Status Application
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CSMA</span> Carrier Sense Multiple Access
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CSW</span> Cabin Switch
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CVR</span> Cockpit Voice Recorder
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">CWR</span> Center Wire Resistance
+      </div>
+    </div>
+
+    <!-- D 开头 -->
+    <h2 class="category-title">D 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">D8PSK</span> Differential 8-level Phase Shift
+        Keying
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DAM</span> Data Access Manager
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DC</span> Direct Current
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DC GSTC</span> DC Ground Service Transfer
+        Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DCL</span> Departure Clearance
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DCP</span> Dimming Control Power
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DCP</span> Display Control Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DH</span> Decision Height
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DHC</span> Dirt Holding Capacity
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DISC</span> Disconnect
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DLF</span> Data Load Function
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DLNA</span> Duplex Low Noise Amplifier
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DLS</span> Data Load System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DMD</span> Datalink Message Display
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DME</span> Distance Measuring Equipment
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DMRS</span> Direct Mode Rate Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DP</span> Differential Pressure
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DP</span> Distribution Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DS</span> Display System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DS</span> Doors System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DSD</span> Datalink Status Display
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DSP</span> Datalink Service Provider
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DSS</span> Door Signal System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DTC</span> DC Tie Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DTS</span> Duct Temperature Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">DWS</span> Door Warning System
+      </div>
+    </div>
+
+    <!-- E 开头 -->
+    <h2 class="category-title">E 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">E DP</span> Essential Distribution Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">E TRUC</span> Essential Transformer Rectifier
+        Unit Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">E/E</span> Electrical/Electronic
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EAFR</span> Enhanced Airborne Flight Recorder
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EAT</span> Estimated Arrival Time
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ECKV</span> Extraction Check Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ECS</span> External Communication System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ECU</span> Electronic Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ECU</span> Engine Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ECU</span> External Compensation Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EDP</span> Engine Driven Pump
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EDP</span> Essential Distribution Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EEC</span> Electronic Engine Controller
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EFB</span> Electronic Flight Bag
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EGT</span> Exhaust Gas Temperature
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EHSV</span> Electro-Hydraulic Servo Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EI</span> Engine Indications
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EICAS</span> Engine Indicating and Crew Alerting
+        System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EICU</span> Engine Interface Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ELT</span> Emergency Locator Transistor
+      </div>
+      <div class="abbr-item"><span class="abbr-code">EMER</span> Emergency</div>
+      <div class="abbr-item">
+        <span class="abbr-code">EMP</span> Electric Motor Pump
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EMPC</span> Emergency Power Control
+      </div>
+      <div class="abbr-item"><span class="abbr-code">ENG</span> Engine</div>
+      <div class="abbr-item">
+        <span class="abbr-code">EPCT</span> External Power Current Transformer
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EPDS</span> Electrical Power Distribution System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EPGS</span> Electrical Power Generation System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EPS</span> Electrical Power System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EPSU</span> Emergency Power Supply Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EPU</span> Electrical Power Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ERAIA</span> Emergency Ram Air Inlet Actuator
+      </div>
+      <div class="abbr-item"><span class="abbr-code">ES</span> End System</div>
+      <div class="abbr-item"><span class="abbr-code">ESS</span> Essential</div>
+      <div class="abbr-item">
+        <span class="abbr-code">ETC</span> Essential Tie Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ETOPS</span> Extended Range Twin Engined
+        Aircraft Operations
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ETR</span> Essential Tie Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ETTS</span> Electronic Thrust Trim System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EVS</span> Enhanced Vision System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EXT</span> Extinguishing
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">EXT PWR</span> External Power
+      </div>
+    </div>
+
+    <!-- F 开头 -->
+    <h2 class="category-title">F 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">FADEC</span> Full Authority Digital Engine
+        Control
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FAH</span> Flight Attendant Handset
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FANS</span> Future Air Navigation System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FAP</span> Flight Attendant Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FC BR</span> Flight Control Battery Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FC PMG</span> Flight Control Permanent Magnet
+        Generator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FCE</span> Flight Control Electronic
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FCL</span> Flight Control Laws
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FCM</span> Flight Control Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FCS</span> Flight Control System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FCV</span> Flow Control Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FD</span> Flight Director
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FDAS</span> Flight Deck Alerting System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FDE</span> Flight Deck Effect
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FDR</span> Flight Data Recorder
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FG</span> Flight Guidance
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FGCS</span> Flight Guidance Control System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FHA</span> Function Hazard Assessment
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FIS</span> Flight Information Service
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FLS</span> Field Loadable Software
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FLTA</span> Forward Looking Terrain Avoidance
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FMA</span> Flight Mode Annunciation
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FMCP</span> Flight Mode Control Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FMEA</span> Failure Modes and Effects Analysis
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FMPA</span> Flange Mounted Power Amplifier
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FMS</span> Flight Management System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FOD</span> Foreign Object Damage
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FPS</span> Fire Protection System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FPV</span> Flight Path Vector
+      </div>
+      <div class="abbr-item"><span class="abbr-code">FR</span> Frame</div>
+      <div class="abbr-item">
+        <span class="abbr-code">FRDC</span> Fuel Remote Data Concentrator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FSB</span> Fasten Seat Belt
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FSCL</span> Flap/Slat Control Lever
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FSD</span> FMS Status Display
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FSECU</span> Flap Slat Electronic Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FSM</span> File Server Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FSM</span> Flight System Message
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FSO</span> Full Scale Output
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FSV</span> Flow Sensor Venturi
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FTA</span> Fault Tree Analysis
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FTIS</span> Fuel Tank Inerting System
+      </div>
+      <div class="abbr-item"><span class="abbr-code">FWD</span> Forward</div>
+      <div class="abbr-item">
+        <span class="abbr-code">FWD/AFT</span> Forward/Aft
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FWDBFAN</span> Forward Blowing Fan
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">FWSOV</span> FireWall ShutOff Valve
+      </div>
+    </div>
+
+    <!-- G 开头 -->
+    <h2 class="category-title">G 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item"><span class="abbr-code">GA</span> Go-Around</div>
+      <div class="abbr-item">
+        <span class="abbr-code">GCF</span> Ground Cooling Fan
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GCU</span> Generator Control Unit
+      </div>
+      <div class="abbr-item"><span class="abbr-code">GEN</span> Generator</div>
+      <div class="abbr-item">
+        <span class="abbr-code">GFRP</span> Glass Fiber Reinforced Plastic
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GIPC</span> General Information Processing
+        Computer
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GLD</span> Ground Lift Dump
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GLS</span> GNSS Landing System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GLS</span> GPS Landing System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GLU</span> Global Landing Unit
+      </div>
+      <div class="abbr-item"><span class="abbr-code">GND</span> Ground</div>
+      <div class="abbr-item">
+        <span class="abbr-code">GND SVC</span> Ground Service
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GNSS</span> Global Navigation Satellite System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GPM</span> General Processing Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GPS</span> Global Positioning System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GPWS</span> Ground Proximity Warning System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GRA</span> Geared Rotary Actuator
+      </div>
+      <div class="abbr-item"><span class="abbr-code">GS</span> Glideslope</div>
+      <div class="abbr-item">
+        <span class="abbr-code">GS</span> Ground Speed
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GS</span> Ground Spoiler
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GSCM</span> Ground Spoiler Control Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GSE</span> Ground Support Equipment
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GSS</span> Ground Support System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GSTC</span> Ground Service Transfer Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GUI</span> Graphical User Interface
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">GWIV</span> Gray Water Interface Valve
+      </div>
+    </div>
+
+    <!-- H 开头 -->
+    <h2 class="category-title">H 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">HA</span> Hosted Application
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HACKV</span> Hot Air Check Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HCP</span> Hydraulic Control Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HDD</span> Head Down Display
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HDDCS</span> Head-Down Display and Control
+        System
+      </div>
+      <div class="abbr-item"><span class="abbr-code">HDST</span> Headset</div>
+      <div class="abbr-item">
+        <span class="abbr-code">HF</span> High Frequency
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HFDL</span> High Frequency Data Link
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HFS</span> High Frequency System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HGA</span> High Gain Antenna
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HID</span> High Intensity Discharge
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HLRM</span> Hydraulic Line Replaceable Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HLS</span> High Lift System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HMI</span> Human Machine Interface
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HMIC</span> Hand Microphone
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HMJP</span> Hand Mic Jack Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HPDS</span> High Pressure Ducting System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HPGC</span> High Pressure Ground Connector
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HPV</span> High Pressure Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HRD</span> High Rate Discharge
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HS</span> Horizontal Stabilizer
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HSP</span> Hydraulic Synoptic Page
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HSTA</span> Horizontal Stabilizer Trim Actuator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HTTP</span> Hypertext Transfer Protocol
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HUD</span> Head-Up Display
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HX</span> Heat Exchanger
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">HXA</span> Heat Exchanger Assembly
+      </div>
+    </div>
+
+    <!-- I 开头 -->
+    <h2 class="category-title">I 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">IAMS</span> Integrated Air Management System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IASC</span> Integrated Air System Controller
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IBIT</span> Initiated Built-In Test
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ICAO</span> International Civil Aviation
+        Organization
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ICBP</span> Integrated Circuit Breaker Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ID</span> Ice Detector
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ID</span> Identification
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IDS</span> Ice Detection System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IDU</span> Integrated Display Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IEMF</span> Integrated Electrical and Mechanical
+        Function
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IF</span> Intermediate Frequency
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IFE</span> In-Flight Entertainment
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IFES</span> In-Flight Entertainment System
+      </div>
+      <div class="abbr-item"><span class="abbr-code">IGLS</span> ILS/GLS</div>
+      <div class="abbr-item">
+        <span class="abbr-code">IGGS</span> Inert Gas Generation System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IHDC</span> Integrated Hazard Data Concentrator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ILS</span> Instrument Landing System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ILSD</span> Interior Lighting System Director
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IMA</span> Integrated Modular Avionics
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IMB</span> Inter Module Bus
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IMC</span> Integrated Modular Cabinet
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">I-NCU</span> Integrated Network Control Unit
+      </div>
+      <div class="abbr-item"><span class="abbr-code">INT</span> Interphone</div>
+      <div class="abbr-item">
+        <span class="abbr-code">IOC</span> Input Output Controller
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IPCKV</span> Intermediate Port Check Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IRS</span> Inertial Reference System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IRU</span> Inertial Reference Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">IS</span> Information System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ISDN</span> Integrated Services Digital Network
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ISDT</span> Information System Display Terminal
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ISI</span> Integrated Standby Instrument
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ISIM</span> Information Security Interface
+        Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ISMKB</span> Information System Multi-Functional
+        Keyboard
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ISS</span> Integrated Surveillance System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ISS-D</span> Integrated Surveillance
+        System-Depopulated
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ITU</span> International Telecommunication Union
+      </div>
+    </div>
+
+    <!-- L 开头 -->
+    <h2 class="category-title">L 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item"><span class="abbr-code">L</span> Left</div>
+      <div class="abbr-item">
+        <span class="abbr-code">L ACETR</span> Left AC Essential Transfer Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L ACTR</span> Left AC Tie Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L BLC</span> Left Battery Line Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L BPCU</span> Left Bus Power Control Unit
+      </div>
+      <div class="abbr-item"><span class="abbr-code">L DC</span> Left DC</div>
+      <div class="abbr-item">
+        <span class="abbr-code">L DP</span> Left Distribution Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LDPCT</span> Left Differential Protection
+        Current Transformer
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L DTC</span> Left DC Tie Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L EPR</span> Left External Power Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L ESSR</span> Left Essential Solid State Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L ETR</span> Left Essential Tie Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L GC</span> Left Generator Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L GCU</span> Left Generator Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L ICBP</span> Left Integrated Circuit Breaker
+        Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L PACK</span> Left Pack
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L QAD</span> Left Quick Attach and Detach
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L TCT</span> Left AC Tie Bus Line Current
+        Transformer
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L TRU</span> Left Transformer Rectifier Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L TRU C</span> Left Transformer Rectifier Unit
+        Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L TSSR</span> Left Tie Solid State Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">L VFG</span> Left Variable Frequency Generator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LAN</span> Local Area Network
+      </div>
+      <div class="abbr-item"><span class="abbr-code">LAV</span> Lavatory</div>
+      <div class="abbr-item">
+        <span class="abbr-code">LED</span> Light Emitting Diode
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LGCU</span> Landing Gear Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LGCV</span> Landing Gear Control Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LGS</span> Landing Gear System
+      </div>
+      <div class="abbr-item"><span class="abbr-code">LOC</span> Localizer</div>
+      <div class="abbr-item">
+        <span class="abbr-code">LPGC</span> Low Pressure Ground Connector
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LRA</span> Line Replaceable Assembly
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LRD</span> Low Rate Discharge
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LRM</span> Line Replaceable Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LRU</span> Line Replaceable Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LSB</span> Lower Sideband
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LSC</span> Landscape Camera
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LSK</span> Line Select Key
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LSP</span> Loadable Software Part
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">LVDT</span> Linear Variable Differential
+        Transducer
+      </div>
+    </div>
+
+    <!-- M 开头 -->
+    <h2 class="category-title">M 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">MAC</span> Mean Aerodynamic Chord
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MB</span> Magnetic Bearing
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MB</span> Marker Beacon
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MBIT</span> Maintenance Built-In Test
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MC</span> Master Caution
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MCE</span> Motor Control Electronics
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MCM</span> Maintenance Communication Manager
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MCU</span> Modularized Concept Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MFD</span> Multifunction Flight Display
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MFD</span> Multiple Function Display
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MFS</span> Multi-Function Spoiler
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MHX</span> Main Heat Exchanger
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MIP</span> Maintenance Interface Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MKB</span> Multi-Functional Keyboard
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MLG</span> Main Landing Gear
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MMR</span> Multi-Mode Receiver
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MMIS</span> Mix Manifold Temperature Sensor
+      </div>
+      <div class="abbr-item"><span class="abbr-code">MS</span> Menu Select</div>
+      <div class="abbr-item">
+        <span class="abbr-code">MSV</span> Mode Selector Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MTBF</span> Mean Time Between Failure
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MTBUR</span> Mean Time Between Unscheduled
+        Removals
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MW</span> Master Warning
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">MWW</span> Main Wheel Well
+      </div>
+    </div>
+
+    <!-- N 开头 -->
+    <h2 class="category-title">N 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">N1</span> Engine low pressure rotor speed
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">N2</span> Engine high pressure rotor speed
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">NACA</span> National Advisory Committee for
+        Aeronautics
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">NAI</span> Nacelle Anti-Ice
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">NAIPT</span> Nacelle Anti-Ice Pressure
+        Transducer
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">NAIS</span> Nacelle Anti-Ice System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">NAISOV</span> Nacelle Anti-Ice Shut-Off Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">NAITS</span> Nacelle Anti-Ice Temperature Sensor
+      </div>
+      <div class="abbr-item"><span class="abbr-code">NAV</span> Navigation</div>
+      <div class="abbr-item">
+        <span class="abbr-code">NCD</span> No Computer Data
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ND</span> Navigation Display
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">NEA</span> Nitrogen Enriched Air
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">NEADS</span> Nitrogen Enriched Air Distribution
+        System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">NFS</span> Network File Server
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">NLG</span> Nose Landing Gear
+      </div>
+      <div class="abbr-item"><span class="abbr-code">NS</span> No Smoking</div>
+      <div class="abbr-item">
+        <span class="abbr-code">NVM</span> Non Volatile Memory
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">NWS</span> Nose Wheel Steering
+      </div>
+    </div>
+
+    <!-- O 开头 -->
+    <h2 class="category-title">O 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">OADLF</span> OMS Airborne Data Loader Function
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">OCL</span> Oceanic Clearance
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ODL</span> Onboard Data Loader
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">OET</span> Optical-Electrical Translator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">OFV</span> Outflow Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">OHSC</span> Overhead Stowage Compartment
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">OMD</span> Onboard Maintenance Document
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">OMS</span> Onboard Maintenance System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">OOO</span> Out-Off-On-In
+      </div>
+      <div class="abbr-item"><span class="abbr-code">OPT</span> Optional</div>
+      <div class="abbr-item">
+        <span class="abbr-code">OPU</span> Overvoltage Protection Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ORT</span> Owner's Requirements Table
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">OS</span> Operating System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">OS</span> Oxygen System
+      </div>
+      <div class="abbr-item"><span class="abbr-code">OVHD</span> Overhead</div>
+      <div class="abbr-item">
+        <span class="abbr-code">OZC</span> Ozone Converter
+      </div>
+    </div>
+
+    <!-- P 开头 -->
+    <h2 class="category-title">P 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">PA</span> Passenger Address
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PAA</span> Parameter Acquisition Application
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PACIS</span> Passenger Address and Cabin
+        Interphone Subsystem
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PBA</span> Push Button Annunciator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PBE</span> Protective Breathing Equipment
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PBIT</span> Power Up Built-In Test
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PCM</span> Power Condition Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PCM</span> Power Control Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PCU</span> Power Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PDA</span> Premature Descent Alert
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PDPS</span> Pack Discharge Pressure Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PDTS</span> Pack Discharge Temperature Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PDU</span> Power Drive Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PED</span> Portable Electronic Devices
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PEP</span> Peak Envelope Power
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PF</span> Pilot Flying
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PFCS</span> Primary Flight Control System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PFD</span> Primary Flight Display
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PFTU</span> Pedal Feel Trim Unit
+      </div>
+      <div class="abbr-item"><span class="abbr-code">PH</span> Phase</div>
+      <div class="abbr-item">
+        <span class="abbr-code">PHX</span> Primary Heat Exchanger
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PIFS</span> Pack Inlet Flow Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PIT</span> Pilot Initiated Test
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PMD</span> Portable Maintenance Device
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PMG</span> Permanent Magnet Generator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PNF</span> Pilot Not Flying
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">POA</span> Plain Old ACARS
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">POB</span> Pressure-Off Brake
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">POR</span> Point Of Regulation
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">POS</span> Passenger Oxygen System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">POTS</span> Plain Old Telephone Service
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PPDS</span> Primary Power Distribution System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PPPOE</span> Point to Point Protocol over
+        Ethernet
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PPS</span> Power Plant System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PRA</span> Particular Risks Analysis
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PRV</span> Pressure Relief Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PSCU</span> Passenger Service Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PSEU</span> Proximity Sensor Electronics Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PSIU</span> Passenger Service Information Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PSK</span> Phase Shift Keying
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PSM</span> Power Supply Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PSP</span> Pitch Speed Protection
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PSU</span> Passenger Service Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PTS</span> Pack Temperature Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PTT</span> Push-to-Talk
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PTU</span> Power Transfer Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PWM</span> Pulse Width Modulation
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">PWS</span> Predictive Windshear System
+      </div>
+    </div>
+
+    <!-- Q 开头 -->
+    <h2 class="category-title">Q 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">QAD</span> Quick Attach and Detach
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">QAR</span> Quick Access Recorder
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">QD</span> Quick Disconnect
+      </div>
+    </div>
+
+    <!-- R 开头 -->
+    <h2 class="category-title">R 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item"><span class="abbr-code">R</span> Right</div>
+      <div class="abbr-item">
+        <span class="abbr-code">R ACETR</span> Right AC Essential Transfer Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R ACTR</span> Right AC Tie Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R BLC</span> Right Battery Line Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R BPCU</span> Right Bus Power Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R DP</span> Right Distribution Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R DTC</span> Right DC Tie Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R ESS R</span> Right Essential Solid State Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RETR</span> Right Essential Tie Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R GC</span> Right Generator Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R GCU</span> Right Generator Control Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RICBP</span> Right Integrated Circuit Breaker
+        Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R PACK</span> Right Pack
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R QAD</span> Right Quick Attach and Detach
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R TCT</span> Right AC Tie Bus Line Current
+        Transformer
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R TRU</span> Right Transformer Rectifier Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R TRU C</span> Right Transformer Rectifier Unit
+        Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R TSSR</span> Right Tie Solid State Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R VFG</span> Right Variable Frequency Generator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">R/T</span> Receiving/Transmitting
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RA</span> Radio Altimeter
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RAA</span> Radio Altimeter Antenna
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RAD</span> Ram Air Door
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RAT</span> Ram Air Turbine
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RAT GCU</span> Ram Air Turbine Generator Control
+        Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RAT GEN</span> Ram Air Turbine Generator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RBPU</span> Rudder Brake Pedal Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RCP</span> Reversion Control Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RDIU</span> Remote Data Interface Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RECF</span> Recirculation Filter
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">REU</span> Remote Electronic Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RF</span> Radio Frequency
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RGLC</span> RAT Generator Line Contactor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RIPS</span> Recorder Independent Power Supply
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RIU</span> Radio Interface Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RLS</span> Remote Light Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RMM</span> Removable Memory Media
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RNP</span> Required Navigation Performance
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RNS</span> Radio Navigation System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ROV</span> Redundant Over Voltage
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RPDU</span> Remote Power Distribution Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RSW</span> Remote Switch
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RTS</span> Return To Seat
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">RVDT</span> Rotary Variable Differential
+        Transducer
+      </div>
+    </div>
+
+    <!-- S 开头 -->
+    <h2 class="category-title">S 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">SAE</span> Society of Automotive Engineers
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SAL</span> System Address Label
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SAT</span> Static Air Temperature
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SATCOM</span> Satellite Communication
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SAV</span> Starter Air Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SBB</span> Swift Broad Band
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SCLU</span> Speedbrake Control Lever Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SCM</span> SDU Configuration Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SD</span> Secure Digital
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SDR</span> Software Defined Radio
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SDU</span> Satellite Data Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SELCAL</span> Selective Calling
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SIU</span> System Interface Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SNMP</span> Simple Network Management Protocol
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SOV</span> Shut Off Valve
+      </div>
+      <div class="abbr-item"><span class="abbr-code">SPKR</span> Speaker</div>
+      <div class="abbr-item">
+        <span class="abbr-code">SPU</span> Start Power Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SRM</span> Security Router Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SSA</span> System Safety Assessment
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SSPC</span> Solid State Power Controller
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SSR</span> Solid State Relay
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">SSU</span> Side Stick Unit
+      </div>
+      <div class="abbr-item"><span class="abbr-code">STBY</span> Standby</div>
+      <div class="abbr-item"><span class="abbr-code">STGR</span> Stringer</div>
+      <div class="abbr-item">
+        <span class="abbr-code">SVS</span> Synthetic Vision System
+      </div>
+      <div class="abbr-item"><span class="abbr-code">SW</span> Switch</div>
+      <div class="abbr-item"><span class="abbr-code">SYS</span> System</div>
+    </div>
+
+    <!-- T 开头 -->
+    <h2 class="category-title">T 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">TAPRV</span> Trim Air Pressure Regulating Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TAS</span> True Air Speed
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TAT</span> Total Air Temperature
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TAV</span> Trim Air Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TAWS</span> Terrain Avoidance Warning System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TAWS</span> Terrain Awareness and Warning System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TCAS</span> Traffic Alert and Collision
+        Avoidance System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TCB</span> Thermal Circuit Breaker
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TCP</span> Trim Control Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TCP</span> Tuning Control Panel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TCP/IP</span> Transport Control
+        Protocol/Internet Protocol
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TCPS</span> Temperature Compensated Pressure
+        Switch
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TCQ</span> Throttle Control Quadrant
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TCS</span> Temperature Control System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TCV</span> Temperature Control Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TD</span> Thrust Director
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TELNET</span> Telecommunications Network
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TERR OVRD</span> Terrain Override
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">THS</span> Trimmable Horizontal Stabilizer
+      </div>
+      <div class="abbr-item"><span class="abbr-code">TO</span> Take-Off</div>
+      <div class="abbr-item">
+        <span class="abbr-code">TOGA</span> Take Off Go Around
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TRF</span> Thrust Rating Function
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TRN</span> Thrust Recovery Nozzle
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TRU</span> Transformer Rectifier Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TRV</span> Thrust Recovery Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TSA</span> Traffic Surveillance Antenna
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TTP</span> Time Triggered Protocol
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">TWIP</span> Terminal Weather for Pilots
+      </div>
+    </div>
+
+    <!-- U 开头 -->
+    <h2 class="category-title">U 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">UA</span> User Application
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">UADF</span> User Application Definition File
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">ULB</span> Underwater Location Beacon
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">USB</span> Universal Serial Bus
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">USB</span> Upper Side Band
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">USIM</span> Universal Subscriber Identity Module
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">UTC</span> Universal Time Coordinated
+      </div>
+    </div>
+
+    <!-- V 开头 -->
+    <h2 class="category-title">V 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">VDL</span> VHF Datalink
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VENTS</span> Ventilated Temperature Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VF</span> Variable Frequency
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VF AC</span> Variable Frequency Alternating
+        Current
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VFG</span> Variable Frequency Generator
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VFMD</span> Variable Frequency Motor Drive
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VHF</span> Very High Frequency
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VHFA</span> Very High Frequency Antenna
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VHF-NAV</span> Very High Frequency Navigation
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VIR</span> VOR ILS Receiver
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VOR</span> VHF Omnidirectional Range
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VPN</span> Virtual Private Network
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VS</span> Vertical Stabilizer
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VSD</span> Vertical Situation Display
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VSU</span> Video Server Unit
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">VTS</span> Ventilated Temperature Sensor
+      </div>
+    </div>
+
+    <!-- W 开头 -->
+    <h2 class="category-title">W 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">WAIPS</span> Wing Anti-Ice Pressure Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WAIS</span> Wing Anti-Ice System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WAITS</span> Wing Anti-Ice Temperature Sensor
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WAIV</span> Wing Anti-Ice Valve
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WAP</span> Wireless Access Point
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WAPA</span> Wireless Access Point Antenna
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WBS</span> Wheel and Brake System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WCS</span> Windshield Cleaning System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WFX</span> Wing Front Spar X Station
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WHC</span> Windshield Heater Controller
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WHS</span> Windshield Heating System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WIFI</span> Wireless Fidelity
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WLAN</span> Wireless Local Area Network
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WOW</span> Weight On Wheel
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WPA</span> Wireless Protected Access
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WRRS</span> Windshield Rain Repellent System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WSIC</span> Water System Interface Control
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WTB</span> Wing Tip Brake
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WWS</span> Water/Waste System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WWS</span> Windshield Wiper System
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WWSCP</span> Water Waste System Control
+        Partition
+      </div>
+      <div class="abbr-item">
+        <span class="abbr-code">WXR</span> Weather Radar
+      </div>
+    </div>
+
+    <!-- X 开头 -->
+    <h2 class="category-title">X 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item"><span class="abbr-code">XFER</span> Transfer</div>
+      <div class="abbr-item">
+        <span class="abbr-code">XPDR</span> Transponder
+      </div>
+    </div>
+
+    <!-- Z 开头 -->
+    <h2 class="category-title">Z 类缩写</h2>
+    <div class="abbr-container">
+      <div class="abbr-item">
+        <span class="abbr-code">ZAU</span> Zone audio unit
+      </div>
+    </div>
+
+    <script>
+      // 获取所有元素
+      const searchInput = document.getElementById("searchInput");
+      const allItems = document.querySelectorAll(".abbr-item");
+      const allCategories = document.querySelectorAll(".category-title");
+
+      // 实时搜索 + 分类联动隐藏
+      searchInput.addEventListener("input", function () {
+        const keyword = this.value.trim().toLowerCase();
+        let hasVisibleItem = {};
+
+        // 先遍历所有词条，标记显示/隐藏
+        allItems.forEach((item) => {
+          const text = item.textContent.toLowerCase();
+          const isMatch = keyword === "" || text.includes(keyword);
+          item.classList.toggle("hidden", !isMatch);
+
+          // 记录每个分类下是否有可见内容
+          if (isMatch) {
+            const category = item.parentElement.previousElementSibling;
+            if (category && category.classList.contains("category-title")) {
+              hasVisibleItem[category.innerText] = true;
+            }
+          }
+        });
+
+        // 根据词条显示状态，控制分类标题显示/隐藏
+        allCategories.forEach((cat) => {
+          cat.classList.toggle("hidden", !hasVisibleItem[cat.innerText]);
+        });
+      });
+    </script>
+  </body>
+</html>
